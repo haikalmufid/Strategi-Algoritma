@@ -1,0 +1,23 @@
+import time
+print()
+print("Program menghitung rata-rata dan waktu yg dibutuhkan untuk menghitung rata-rata")
+print("===========================================")
+n = int(input("Masukkan banyak data : "))
+print()
+
+print("Masukkan angka yang ingin diinputkan")
+bilangan = []
+for i in range(n):
+  print("Angka ke-", i+1, " : ", sep='', end='')
+  bilangan.append(int(input()))
+
+start_time = time.time()
+
+rata_rata = sum(bilangan) / len(bilangan)
+
+end_time = time.time()
+
+waktu = (end_time - start_time) * 1000
+
+print(f"Rata-rata bilangan adalah {rata_rata:.2f}")
+print(f"Waktu yang dibutuhkan untuk perhitungan adalah {waktu:.2f} milisecond")
